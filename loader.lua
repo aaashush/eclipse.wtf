@@ -2,7 +2,7 @@ writefile("ECLIPSE_KEY.txt", script_key)
 
 do
     if game.PlaceId == 10228136016 then -- Fallen
-        local Loader = loadstring(game:HttpGet("https://raw.githubusercontent.com/BurnHubz/eclipse/main/Loader.lua",true))()
+        local Loader = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaashush/eclipse.wtf/refs/heads/main/Loader",true))()
         Loader:Initialize()
         --load
         queue_on_teleport([==[
