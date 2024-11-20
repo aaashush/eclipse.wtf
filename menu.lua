@@ -20,7 +20,7 @@ repeat
         obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
     end
     if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(115, 100, 215)">Public</font>'
+        obj.Text = 'build: <font color="rgb(115, 100, 215)">Private</font>'
     end
  end
  
@@ -297,7 +297,7 @@ repeat
  end
  
  local library = {
-    Title = 'eclipse.<font color="rgb(115, 100, 215)">wtf</font> || fallen',
+    Title = 'eclipse.<font color="rgb(115, 100, 215)">wtf</font> || Phantom Forces',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
