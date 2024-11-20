@@ -214,7 +214,7 @@ repeat
     WaterMarkLabel.Position = UDim2.new(0, 0, 0, 0)
     WaterMarkLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
     WaterMarkLabel.RichText = true
-    WaterMarkLabel.Text = "Build: Private"
+    WaterMarkLabel.Text = "eclipse.wtf | Phantom Forces | discord.gg/eclipsewtf"
     WaterMarkLabel.TextColor3 = Color3.fromRGB(152, 152, 152)
     WaterMarkLabel.TextSize = 10
     WaterMarkLabel.TextWrapped = false
