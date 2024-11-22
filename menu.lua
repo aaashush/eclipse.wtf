@@ -17,7 +17,7 @@ repeat
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
  for _, obj in pairs(menu:GetDescendants()) do
     if obj.Name:lower():find('userlabel') then
-        obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
+        obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game:GetService("Players").LocalPlayer.Name .. '</font>'
     end
     if obj.Name:lower():find('buildlabel') then
         obj.Text = 'build: <font color="rgb(115, 100, 215)">Private</font>'
@@ -25,7 +25,7 @@ repeat
  end
  
  --vars
- local CloneCore = cloneref(game.CoreGui)
+ local CloneCore = cloneref(game:GetService("CoreGui"))
  local CloneScreenGui = cloneref(Instance.new("ScreenGui"))
  local RunService = game:GetService("RunService")
  local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
@@ -287,9 +287,9 @@ repeat
        while task.wait() do
          rotateGradient()
          local time = os.date("%X", os.time())
-         local ping = string.format('%.0f', game.Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
+         local ping = string.format('%.0f', game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())
          local uid = "1"
-         local fpsValue = string.split(game.Stats.Workspace.Heartbeat:GetValueString(), ".")[1]
+         local fpsValue = string.split(game:GetService("Stats").Workspace.Heartbeat:GetValueString(), ".")[1]
          WaterMarkLabel.Text = 'eclipse.<font color="rgb(115, 100, 215)">wtf</font> - uid: <font color="rgb(115, 100, 215)">' .. uid .. '</font> / fps: <font color="rgb(115, 100, 215)">' .. fpsValue .. '</font> / ping: <font color="rgb(115, 100, 215)">' .. ping .. '</font> / time: <font color="rgb(115, 100, 215)">' .. time .. '</font>'
        end
     end)
@@ -412,7 +412,7 @@ repeat
  
     for _, obj in pairs(menu:GetDescendants()) do
         if obj.Name:lower():find('name_esp') then
-           obj.Text = '<font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
+           obj.Text = '<font color="rgb(115, 100, 215)">' .. game:GetService("Players").LocalPlayer.Name .. '</font>'
         end
     end
     function library:visualize(state)
