@@ -17,7 +17,7 @@ local tabholder = menu.bg.bg.bg.bg.bg.bg.main.group;
 local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
 for _, obj in pairs(menu:GetDescendants()) do
    if obj.Name:lower():find('userlabel') then
-       obj.Text = 'active user: <font color="rgb(189, 172, 255)">' .. game.Players.LocalPlayer.Name .. '</font>'
+       obj.Text = 'active user: <font color="rgb(189, 172, 255)">' .. game:GetService("Players").LocalPlayer.Name .. '</font>'
    end
    if obj.Name:lower():find('buildlabel') then
        obj.Text = 'build: <font color="rgb(189, 172, 255)">Public</font>'
@@ -80,9 +80,9 @@ local function createWatermark()
 
    function Watermark:Update(Text) 
       local time = os.date("%X", os.time())
-      local ping = string.format('%.0f', game.Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
+      local ping = string.format('%.0f', game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())
       local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-      local fpsValue = string.split(game.Stats.Workspace.Heartbeat:GetValueString(), ".")[1]
+      local fpsValue = string.split(game:GetService("Stats").Workspace.Heartbeat:GetValueString(), ".")[1]
       WaterMarkLabel.Text = 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> - game: <font color="rgb(189, 172, 255)">' .. gameName .. '</font> / fps: <font color="rgb(189, 172, 255)">' .. fpsValue .. '</font> / ping: <font color="rgb(189, 172, 255)">' .. ping .. '</font> / time: <font color="rgb(189, 172, 255)">' .. time .. '</font>'
    end
    
@@ -201,7 +201,7 @@ local library = {
    end
    for _, obj in pairs(menu:GetDescendants()) do
       if obj.Name:lower():find('name_esp') then
-          obj.Text = '<font color="rgb(189, 172, 255)">' .. game.Players.LocalPlayer.Name .. '</font>'
+          obj.Text = '<font color="rgb(189, 172, 255)">' .. game:GetService("Players").LocalPlayer.Name .. '</font>'
       end
    end
 
